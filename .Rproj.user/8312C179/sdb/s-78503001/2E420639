@@ -1,0 +1,16 @@
+{
+    "contents" : "library(shiny)\n\n# Define UI for application that draws a histogram\nshinyUI(fluidPage(\n  \n  # Application title\n  titlePanel(\"Roll Some Dice!\"),\n  \n  # Sidebar with a slider input for the number of bins\n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"diceSides\",\n                  \"Number of Sides on the dice:\",\n                  min = 2,\n                  max = 25,\n                  value = 6),\n      sliderInput(\"numDice\",\n                  \"Number dice to roll:\",\n                  min = 1,\n                  max = 50,\n                  value = 2),\n      sliderInput(\"numRolls\",\n                  \"Number of Rolls:\",\n                  min = 100,\n                  max = 5000,\n                  value = 1000),\n      sliderInput(\"numBins\",\n                  \"Number of bins on the Histrogram:\",\n                  min = 5,\n                  max = 25,\n                  value = 10)\n    \n    ),\n    \n    # Show a plot of the generated distribution\n    mainPanel(\n      h2(\"Rolling Dice\"),\n      h3(\"With this shiny app you can simulate rolling dice in a number\n          of different congifurations and see the resulting distribution\n          of average rolls. Simply adjust the sliders to the left and see how the\n          distribution changes\"),      \n      plotOutput(\"distPlot\")\n    )\n  )\n))",
+    "created" : 1437618690333.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2635452612",
+    "id" : "2E420639",
+    "lastKnownWriteTime" : 1437942925,
+    "path" : "~/GitHub/DataProducts/myApp/ui.R",
+    "project_path" : "myApp/ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

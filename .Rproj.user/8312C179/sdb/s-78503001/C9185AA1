@@ -1,0 +1,16 @@
+{
+    "contents" : "library(shiny)\n\nshinyServer(function(input, output) {\n  \n\n  output$distPlot <- renderPlot({\n    \n    diceSides <- input$diceSides\n    numDice <- input$numDice\n    numRolls <- input$numRolls\n    \n    rolls <- 1:numRolls\n    \n    for (i in 1:numRolls){       \n      values <-  sample(1:diceSides,numDice, replace = T)\n      rolls[i] <- mean(values)\n    }\n    \n    meanRolls <- mean(rolls)\n    \n    bins <- seq(min(rolls), max(rolls), length.out = input$numBins + 1)\n    \n    hist(rolls, breaks = bins, col = 'darkgray', border = 'white')\n    abline(v= meanRolls, col = \"red\")\n    \n  })\n})",
+    "created" : 1437618632698.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1596961602",
+    "id" : "C9185AA1",
+    "lastKnownWriteTime" : 1437942723,
+    "path" : "~/GitHub/DataProducts/myApp/server.R",
+    "project_path" : "myApp/server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

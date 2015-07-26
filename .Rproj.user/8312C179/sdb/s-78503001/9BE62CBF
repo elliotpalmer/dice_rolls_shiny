@@ -1,0 +1,17 @@
+{
+    "contents" : "#Shiny App Set-up\n\n# Roll N of Dice K times and get distribution of means\n\ndiceSides <- 6\nnumDice <- 6\nnumRolls <- 1000\nnumBins = 10\n\nrolls <- 1:numRolls\nfor (i in 1:numRolls){ \n  \n  values <-  sample(1:diceSides,numDice, replace = T)\n  rolls[i] <- mean(values)\n  \n}\n\nmeanRolls <- mean(rolls)\n\nhist(rolls, breaks = numBins)\nabline(v= meanRolls, col = \"red\")",
+    "created" : 1437940617824.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "847734310",
+    "id" : "9BE62CBF",
+    "lastKnownWriteTime" : 171329744,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
